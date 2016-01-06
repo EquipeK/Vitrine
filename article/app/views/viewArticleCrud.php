@@ -1,18 +1,4 @@
-<?php
-	require('head.php'); 
-	require("nav.php");
-	$user = 'root';
-	$mdp = 'root';
-	$host = "localhost";
-	$port = 3306;
-	$db = 'rubis_projet';
-	$dsn = 'mysql:host='. $host .';dbname='. $db.'';
-	try{
-		$bdd = new PDO('mysql:host=localhost;dbname=rubis_projet;charset=utf8', 'root', 'root');
-		$article = $bdd->query("SELECT * FROM categorie");
-
-	?>
-	<div class="container">
+<div class="container">
 		<div class="row">
 			<form method="GET" class="form-group" action="article_save.php">
 				<label>Titre de l'article : </label>
@@ -33,11 +19,3 @@
 			</form>
 		</div>
 	</div>
-	<?php 
-		}
-		catch(Exception $e){
-			echo $e->getMessage();
-		}
-
-		
-	?>
