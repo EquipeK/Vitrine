@@ -1,3 +1,5 @@
+<?php $title = 'Crud article'; ?>
+<?php ob_start(); ?>
 <div class="container">
 		<div class="row">
 			<form method="GET" class="form-group" action="article_save.php">
@@ -19,3 +21,5 @@
 			</form>
 		</div>
 	</div>
+	<?php $content = ob_get_clean(); ?>
+	<?php require 'template.php'; ?>

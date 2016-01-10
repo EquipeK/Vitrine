@@ -1,4 +1,10 @@
 <?php 
   require '../models/model.php';
-  $article = getArticle();
-  require 'viewAccueil.php';
+  try{
+	  $article = getArticle();
+	  require 'viewAccueil.php';
+  }
+  catch(Exception $e){
+  	$msgErreur = $e->getMessage(); 
+  	require 'viewErreur.php';
+  }

@@ -1,3 +1,5 @@
+<?php $title = 'Liste article admin'; ?>
+<?php ob_start(); ?>
 <div class="container">
   <div class="row">
     <table class="table table-striped">
@@ -28,4 +30,5 @@
     </a>
   </div>
 </div>
-
+<?php $content = ob_get_clean(); ?>
+<?php require 'template.php'; ?>

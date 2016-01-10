@@ -1,7 +1,11 @@
 <?php
-	require('head.php'); 
-	require("nav.php");
 	require '../models/model.php';
-  $article = getArticle();
+  try{
+	  $article = getArticle();
   require 'viewArticleCrud.php';
+  }
+  catch(Exception $e){
+  	$msgErreur = $e->getMessage(); 
+  	require 'viewErreur.php';
+  }
 	?>
