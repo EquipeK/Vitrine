@@ -9,14 +9,24 @@
     $bdd = new PDO($dsn, $user, $mdp, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
     return $bdd;
   }
-  function getArticle(){
+  function getArticles(){
     try{
       $bdd = getConnectionBdd();
-      $article = $bdd->query("SELECT * FROM article");
+      $articles = $bdd->query("SELECT * FROM article");
     }
     catch(Exception $e){
       echo $e->getMessage();
     }
-    return $article;
+    return $articles;
+  }
+  
+  function getArticle($id){
+    $bdd = getConnectionBdd();
+    $article = $bdd->prepare('SELECT id_article as id, libelle_article as titre, desc_article as description FROM article WHERE id_article=?');
+    $article->execute(array($id));
+    if($article->rowCount() >= 1)
+      return $article->fetch();
+    else 
+      throw new Exception("Aucun billet n'existe a ce numéro");
   }
 ?>

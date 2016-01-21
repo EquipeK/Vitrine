@@ -1,7 +1,7 @@
 <?php 
   require '../models/model.php';
   try{
-	  $article = getArticle();
+	  $articles = getArticles();
 	  require 'viewAccueil.php';
   }
   catch(Exception $e){

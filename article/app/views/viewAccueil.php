@@ -2,10 +2,12 @@
 <?php ob_start(); ?>
 <article class="container">
 		<div class="row">
-			<?php foreach ($article as $text) : ?>
+			<?php foreach ($articles as $text) : ?>
 				<div class="col-lg-4 col-md-4 col-sm-6">
 					<div class="article">
-						<h5 class="titre-article text-center"><?= $text['libelle_article']; ?></h5>
+            <a href="<?= "article.php?id=". $text['id_article']. "" ?>">
+						  <h5 class="titre-article text-center"><?= $text['libelle_article']; ?></h5>
+            </a>
 						
 						<img class="img-article center-block" src="<?= $text['img_article'] ?>">
 						<p class="text-center bold">
