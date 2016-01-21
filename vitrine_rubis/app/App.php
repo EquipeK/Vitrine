@@ -6,7 +6,7 @@ use Core\Router;
 
 class App{
 
-    public $title = "Rubis";
+    public $title = "Site Rubis";
     private $db_instance;
     private static $_instance;
 
@@ -25,10 +25,10 @@ class App{
         Core\Autoloader::register();
         //regle de routing
         Router::prefix(PREFIX,'admin');
-        Router::connect('','posts/index');
-        Router::connect(':id/categories.html','posts/category/id:([0-9]+)');
+        Router::connect('','pages/show/1');
+        /*Router::connect(':id/categories.html','posts/category/id:([0-9]+)');
         Router::connect('blog/*','posts/*');
-        Router::connect('cgv.html','pages/show/1');
+        Router::connect('cgv.html','pages/show/1');*/
         Router::connect('login.html','users/login');
     }
 
