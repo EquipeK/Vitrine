@@ -1,0 +1,356 @@
+<html lang="en"><head>
+        <meta charset="UTF-8">
+        <title>Masonry Example Infinite AJAX Scroll</title>
+          
+  <link href="http://infiniteajaxscroll.com/examples/masonry.html" rel="canonical">
+  <meta content="Example of Masonry infinite scrolling with Infinite AJAX Scroll" name="description">
+
+                                  <link href="/css/a85770d.css" rel="stylesheet">
+                  
+
+    <link href="/css/271173f.css" rel="stylesheet">
+  
+  <link href="http://yandex.st/highlightjs/7.5/styles/default.min.css" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300">
+
+  <style type="text/css">
+    .item {
+      width:  80px;
+      height: 80px;
+      float: left;
+      overflow: hidden;
+      margin-bottom: 10px;
+      background: #D26;
+      padding: 5px;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 12px;
+    }
+
+    .item.w2 { width:  180px; }
+    .item.h2 { height: 180px; }
+
+    .container {
+      padding-bottom: 80px;
+    }
+
+    .ias-spinner, .ias-noneleft {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      margin-left: -16px;
+    }
+  </style>
+        <link href="/favicon.ico" type="image/x-icon" rel="icon">
+        <meta content="width=device-width,initial-scale=1" name="viewport">
+    <script async="" src="//www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="//static.getclicky.com/js"></script><script type="text/javascript" async="" src="http://in.getclicky.com/in.php?site_id=100698863&amp;res=1680x1050&amp;lang=fr&amp;type=pageview&amp;href=%2Fexamples%2Fmasonry.html&amp;title=Masonry%20Example%20Infinite%20AJAX%20Scroll&amp;jsuid=1808438638&amp;mime=js&amp;x=0.5971967664449944"></script><style type="text/css" id="igtranslator-color"></style><script type="text/javascript" async="" src="http://in.getclicky.com/in.php?site_id=100698863&amp;type=ping&amp;jsuid=1808438638&amp;mime=js&amp;x=0.6270200246035442"></script><script type="text/javascript" async="" src="http://in.getclicky.com/in.php?site_id=100698863&amp;type=ping&amp;jsuid=1808438638&amp;mime=js&amp;x=0.8260676297573772"></script><script type="text/javascript" async="" src="http://in.getclicky.com/in.php?site_id=100698863&amp;type=ping&amp;jsuid=1808438638&amp;mime=js&amp;x=0.9459650166766841"></script><script type="text/javascript" async="" src="http://in.getclicky.com/in.php?site_id=100698863&amp;type=ping&amp;jsuid=1808438638&amp;mime=js&amp;x=0.005892016339730355"></script><script type="text/javascript" async="" src="http://in.getclicky.com/in.php?site_id=100698863&amp;type=ping&amp;jsuid=1808438638&amp;mime=js&amp;x=0.31104898785488544"></script></head>
+    <body class="docs">
+          <div id="base-container">
+      <header>
+        <nav id="topbar">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/download.html">Pricing &amp; Download</a></li>
+            <li><a href="/docs/">Documentation</a></li>
+            <li><a href="/blog.html">Blog</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div id="main">
+        <aside>
+  <nav>
+    
+      
+    <h4>Introduction</h4>
+
+    <ul class="nav nav-stacked">
+          
+        
+  
+  <li><a href="/docs/overview.html">Overview</a></li>
+  
+        
+  
+  <li><a href="/docs/getting-started.html">Getting started</a></li>
+  
+        
+  
+  <li><a href="/docs/license.html">License</a></li>
+  
+        
+  
+  <li><a href="/docs/upgrade.html">Upgrading</a></li>
+  
+        
+  
+  <li><a href="/docs/changelog.html">Changelog</a></li>
+  
+        
+  
+  <li><a href="/docs/support.html">Support</a></li>
+            </ul>
+    
+    <h4>Reference</h4>
+
+    <ul class="nav nav-stacked">
+          
+        
+  
+  <li><a href="/docs/options.html">Options</a></li>
+  
+        
+  
+  <li><a href="/docs/methods.html">Methods</a></li>
+  
+        
+  
+  <li><a href="/docs/events.html">Events</a></li>
+            </ul>
+    
+    <h4>Extensions</h4>
+
+    <ul class="nav nav-stacked">
+          
+        
+  
+  <li><a href="/docs/extension-trigger.html">Trigger</a></li>
+  
+        
+  
+  <li><a href="/docs/extension-spinner.html">Spinner</a></li>
+  
+        
+  
+  <li><a href="/docs/extension-noneleft.html">None Left</a></li>
+  
+        
+  
+  <li><a href="/docs/extension-paging.html">Paging</a></li>
+  
+        
+  
+  <li><a href="/docs/extension-history.html">History</a></li>
+            </ul>
+    
+    <h4>Cookbooks</h4>
+
+    <ul class="nav nav-stacked">
+          
+        
+  
+  <li><a href="/docs/cookbook-wordpress.html">Wordpress</a></li>
+            </ul>
+    
+    <h4>Examples</h4>
+
+    <ul class="nav nav-stacked">
+          
+        
+  
+  <li><a href="http://infiniteajaxscroll.com/examples/basic.html">Basic</a></li>
+  
+        
+  
+  <li><a href="http://infiniteajaxscroll.com/examples/overflow.html">Overflow</a></li>
+  
+        
+  
+  <li><a href="http://infiniteajaxscroll.com/examples/history.html">History</a></li>
+  
+        
+  
+  <li><a href="http://infiniteajaxscroll.com/examples/masonry.html">Masonry</a></li>
+
+  </ul>
+
+    </nav>
+</aside>
+
+<div class="article-wrapper">
+  <div class="article">
+      <div class="page-header">
+    <h1>Masonry example</h1>
+    <p>This examples shows how Infinite AJAX Scroll can integrate with <a rel="nofollow" target="_blank" href="http://masonry.desandro.com/">Masonry</a>.</p>
+  </div>
+
+  <div class="container" style="position: relative; height: 1400px;">
+    <div class="item" style="position: absolute; left: 0px; top: 0px;">
+      <strong>Item 1.1</strong>
+    </div>
+
+    <div class="item w2 h2" style="position: absolute; left: 100px; top: 0px;">
+      <strong>Item 1.2</strong>
+    </div>
+
+    <div class="item w2 h2" style="position: absolute; left: 300px; top: 0px;">
+      <strong>Item 1.3</strong>
+    </div>
+
+    <div class="item" style="position: absolute; left: 500px; top: 0px;">
+      <strong>Item 1.4</strong>
+    </div>
+
+    <div class="item w2 h2" style="position: absolute; left: 500px; top: 100px;">
+      <strong>Item 1.5</strong>
+    </div>
+
+    <div class="item" style="position: absolute; left: 0px; top: 100px;">
+      <strong>Item 1.6</strong>
+    </div>
+
+    <div class="item" style="position: absolute; left: 0px; top: 200px;">
+      <strong>Item 1.7</strong>
+    </div>
+
+    <div class="item w2 h2" style="position: absolute; left: 100px; top: 200px;">
+      <strong>Item 1.8</strong>
+    </div>
+
+    <div class="item w2 h2" style="position: absolute; left: 300px; top: 200px;">
+      <strong>Item 1.9</strong>
+    </div>
+
+    <div class="item" style="position: absolute; left: 0px; top: 300px;">
+      <strong>Item 1.10</strong>
+    </div>
+
+    <div class="item w2 h2" style="position: absolute; left: 500px; top: 300px;">
+      <strong>Item 1.11</strong>
+    </div>
+
+    <div class="item" style="position: absolute; left: 0px; top: 400px;">
+      <strong>Item 1.12</strong>
+    </div><div class="item" style="position: absolute; left: 100px; top: 400px;">
+      <strong>Item 2.1</strong>
+    </div><div class="item w2 h2" style="position: absolute; left: 200px; top: 400px;">
+      <strong>Item 2.2</strong>
+    </div><div class="item w2 h2" style="position: absolute; left: 0px; top: 500px;">
+      <strong>Item 2.3</strong>
+    </div><div class="item" style="position: absolute; left: 400px; top: 400px;">
+      <strong>Item 2.4</strong>
+    </div><div class="item w2 h2" style="position: absolute; left: 400px; top: 500px;">
+      <strong>Item 2.5</strong>
+    </div><div class="item" style="position: absolute; left: 600px; top: 500px;">
+      <strong>Item 2.6</strong>
+    </div><div class="item" style="position: absolute; left: 200px; top: 600px;">
+      <strong>Item 2.7</strong>
+    </div><div class="item w2 h2" style="position: absolute; left: 0px; top: 700px;">
+      <strong>Item 2.8</strong>
+    </div><div class="item w2 h2" style="position: absolute; left: 200px; top: 700px;">
+      <strong>Item 2.9</strong>
+    </div><div class="item" style="position: absolute; left: 600px; top: 600px;">
+      <strong>Item 2.10</strong>
+    </div><div class="item w2 h2" style="position: absolute; left: 400px; top: 700px;">
+      <strong>Item 2.11</strong>
+    </div><div class="item" style="position: absolute; left: 600px; top: 700px;">
+      <strong>Item 2.12</strong>
+    </div><div class="item" style="position: absolute; left: 600px; top: 800px;">
+      <strong>Item 3.1</strong>
+    </div><div class="item w2 h2" style="position: absolute; left: 0px; top: 900px;">
+      <strong>Item 3.2</strong>
+    </div><div class="item w2 h2" style="position: absolute; left: 200px; top: 900px;">
+      <strong>Item 3.3</strong>
+    </div><div class="item" style="position: absolute; left: 400px; top: 900px;">
+      <strong>Item 3.4</strong>
+    </div><div class="item w2 h2" style="position: absolute; left: 500px; top: 900px;">
+      <strong>Item 3.5</strong>
+    </div><div class="item" style="position: absolute; left: 400px; top: 1000px;">
+      <strong>Item 3.6</strong>
+    </div><div class="item" style="position: absolute; left: 0px; top: 1100px;">
+      <strong>Item 3.7</strong>
+    </div><div class="item w2 h2" style="position: absolute; left: 100px; top: 1100px;">
+      <strong>Item 3.8</strong>
+    </div><div class="item w2 h2" style="position: absolute; left: 300px; top: 1100px;">
+      <strong>Item 3.9</strong>
+    </div><div class="item" style="position: absolute; left: 500px; top: 1100px;">
+      <strong>Item 3.10</strong>
+    </div><div class="item w2 h2" style="position: absolute; left: 500px; top: 1200px;">
+      <strong>Item 3.11</strong>
+    </div><div class="item" style="position: absolute; left: 0px; top: 1200px;">
+      <strong>Item 3.12</strong>
+    </div>
+
+  </div>
+
+  <ul id="pagination" style="display: none;">
+          <li><a href="/examples/masonry/page1.html">1</a></li>
+          <li class="next"><a href="/examples/masonry/page2.html">2</a></li>
+          <li><a href="/examples/masonry/page3.html">3</a></li>
+          <li><a href="/examples/masonry/page4.html">4</a></li>
+      </ul>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="/vendor/jquery-ias/dist/jquery-ias.min.js" type="text/javascript"></script>
+  <script src="/vendor/masonry/dist/masonry.pkgd.min.js" type="text/javascript"></script>
+              
+  <script type="text/javascript">
+    var container = document.querySelector('.container');
+    var msnry = new Masonry( container, {
+      // options
+      itemSelector: '.item',
+      gutter: 10
+    });
+
+    var ias = $.ias({
+      container: ".container",
+      item: ".item",
+      pagination: "#pagination",
+      next: ".next a",
+      delay: 1200
+    });
+
+    ias.on('render', function(items) {
+      $(items).css({ opacity: 0 });
+    });
+
+    ias.on('rendered', function(items) {
+      msnry.appended(items);
+    });
+
+    ias.extension(new IASSpinnerExtension());
+    ias.extension(new IASNoneLeftExtension({html: '&lt;div class="ias-noneleft" style="text-align:center"&gt;&lt;p&gt;&lt;em&gt;You reached the end!&lt;/em&gt;&lt;/p&gt;&lt;/div&gt;'}));
+  </script>
+  </div>
+</div>
+
+      </div>
+
+      <div id="root_footer"></div>
+  </div>
+
+  <footer>
+    <p>&copy; 2016 <a href="http://webcreate.nl/">Webcreate</a>. All rights reserved.</p>
+  </footer>
+                                <script src="/js/cc7f88e.js" type="text/javascript"></script>
+          
+          <script type="text/javascript">
+            var clicky_site_ids = clicky_site_ids || [];
+            clicky_site_ids.push(100698863);
+            (function() {
+              var s = document.createElement('script');
+              s.type = 'text/javascript';
+              s.async = true;
+              s.src = '//static.getclicky.com/js';
+              ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+            })();
+          </script>
+          <noscript>&lt;p&gt;&lt;img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100698863ns.gif" /&gt;&lt;/p&gt;</noscript>
+
+          <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-18000252-3', 'infiniteajaxscroll.com');
+            ga('require', 'displayfeatures');
+            ga('send', 'pageview');
+          </script>
+        
+  <script src="http://yandex.st/highlightjs/7.5/highlight.min.js"></script>
+  <script src="/bundles/webcreateias/js/main.js"></script>
+    
+
+<div class="igtranslator-main-div" style="display: none; width: 0px; height: 0px;"><iframe frameborder="0" src="about:blank" class="igtranslator-iframe" scrolling="no"></iframe></div><div class="igtranslator-activator-icon bounceIn" style="background-image: url(&quot;resource://jid1-dgnibwqga0sibw-at-jetpack/data/icons/home.png&quot;); display: none;" title="Click to Show Translation"></div></body></html>

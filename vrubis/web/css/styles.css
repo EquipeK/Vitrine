@@ -1,0 +1,124 @@
+/* Reset margin, padding and set max-width at 100% */
+body, .container-fluid, header, .row-header, .col-header, .main-content,footer, .container-footer, .row-footer, .social-links{
+	max-width: 100%;
+	padding: 0;
+	margin: 0;
+}
+/*Overclass general elements*/
+a:hover, a:focus {
+	text-decoration: none;
+}
+a:hover {
+    color: #4b2037;
+}
+a:focus {
+    outline: none;
+    color: #fff;
+}
+.fa{
+	color:#fff;
+}
+/* Header */
+#tf-home{
+	height: 804px;
+	background: url(../img/header/header-bg.jpg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+.logo-blanc{
+	padding-top: 272px;
+}
+.header-slogan{
+	padding-top: 17px;
+}
+.page-scroll{
+	font-size: 30px;
+	color: #fff;
+}
+/*Header-title*/
+.row-header-title{
+	margin: 0;
+}
+.header-title{
+	padding-left: 0;
+	padding-right: 0;
+}
+.header-title-left{
+	height: 58px;
+	background-color: #4b2037;
+}
+.header-title-middle{
+	padding-top: 7.5px;
+	height: 58px;
+	background-color: #fff;
+}
+.header-title-right{
+	height: 58px;
+	background-color: #4b2037;
+}
+.logo-title{
+	margin: 0 auto;
+}
+.logo-icon {
+	padding-top: 17px;
+}
+.toggle-menu{
+	padding-top: 15px;
+}
+.icon-login{
+	padding-top: 12px;
+}
+.icon-panier{
+	padding-top: 19.5px;
+}
+.toggle-menu:hover,.icon-login:hover,.icon-panier:hover{
+	color: #352c31;
+}
+/* Main */
+/* Sidebar */
+
+/* Content portefolio masonry */
+
+/* Footer */
+.social-links{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #352C31;
+	border-top: solid 3px #fff;
+}
+.span-social{
+	padding-left: 5px;
+}
+.social-links .fa{
+	color: #352C31;
+  	background: #fff;
+  	width: 45px;
+  	height: 45px;
+  	border-radius: 50%;
+  	text-align: center;
+  	vertical-align: middle;
+	padding-top: 10px;
+}
+.social-links .fa:hover{
+	color: #fff;
+  	background: #4b2037;
+}
+.row-footer-menu{
+	margin: 0 auto;
+	padding-top: 88px;
+	padding-bottom: 58px;
+	background-color: #352C31;
+}
+.row-footer-menu a{
+	margin: 0 auto;
+	display: block;
+	padding-left: 25%;
+	color: #fff;
+}
+.footer-logo{
+	padding-top: 48px;
+	padding-bottom: 36px;
+	background-color: #4b2037;
+}
